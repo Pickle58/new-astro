@@ -1,0 +1,20 @@
+---
+// components/Navigation.astro
+const navLinks = [
+  { href: '/', text: 'Home' },
+  { href: '/about', text: 'About' },
+  { href: '/blog', text: 'Blog' },
+];
+---
+
+<nav class="bg-blue-100 p-4">
+  <ul class="flex justify-center space-x-4">
+    {navLinks.map((link) => (
+      <li>
+        <a href={link.href} class="text-blue-800 font-semibold hover:text-blue-500">
+          {link.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
