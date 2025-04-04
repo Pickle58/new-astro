@@ -1,0 +1,14 @@
+---
+// components/Card.astro
+const { title, image, paragraph } = Astro.props;
+---
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-100 border border-blue-300">
+  <img class="w-3/4 mx-auto rounded-md mt-4" src={image} alt="Card Image" />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2 text-blue-800">{title}</div>
+    <p class="text-gray-700 text-base">
+      {paragraph}
+    </p>
+  </div>
+</div>

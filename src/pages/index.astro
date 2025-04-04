@@ -1,6 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro';
+import image1 from '../assets/img-1.jpg';
+import image2 from '../assets/img-2.jpg';
+import image3 from '../assets/img-3.jpg';
 ---
 <Layout>
     <h1 class="bg-blue-300 text-blue-600 text-center text-lg py-4">Pilkington Enterprises</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      <Card title="Card 1" image={image1.src} paragraph="Paragraph 1..." />
+      <Card title="Card 2" image={image2.src} paragraph="Paragraph 2..." />
+      <Card title="Card 3" image={image3.src} paragraph="Paragraph 3..." />
+    </div>
 </Layout>
