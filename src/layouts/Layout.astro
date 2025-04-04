@@ -1,9 +1,9 @@
 ---
 // src/layouts/Layout.astro
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro'; // Import the Footer component
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-import image4 from '../assets/img-4.jpg'; //import the image for the footer
+import image4 from '../assets/img-4.jpg';
 ---
 
 <!DOCTYPE html>
@@ -13,9 +13,9 @@ import image4 from '../assets/img-4.jpg'; //import the image for the footer
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{Astro.props.title}</title>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <Navigation />
-    <div class="mt-8">
+    <div class="mt-8 flex-grow">
       <slot />
     </div>
     <Footer imageSrc={image4.src} />
