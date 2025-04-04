@@ -1,19 +1,23 @@
 ---
-import './src/styles/global.css'
+// src/layouts/Layout.astro
 import Navigation from '../components/Navigation.astro';
-
+import Footer from '../components/Footer.astro'; // Import the Footer component
+import '../styles/global.css';
+import image4 from '../assets/img-4.jpg'; //import the image for the footer
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Navigation />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body>
+    <Navigation />
+    <div class="mt-8">
+      <slot />
+    </div>
+    <Footer imageSrc={image4.src} />
+  </body>
 </html>

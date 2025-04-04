@@ -1,0 +1,14 @@
+---
+// components/Footer.astro
+const { imageSrc } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="relative h-[10vh] w-full mt-8">
+  <img src={imageSrc} alt="Footer Image" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+    <p class="text-white text-sm text-center">
+      &copy; {currentYear} Pilkington Enterprises. All rights reserved.
+    </p>
+  </div>
+</footer>
