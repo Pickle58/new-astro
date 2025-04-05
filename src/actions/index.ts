@@ -19,7 +19,7 @@ export const server = {
       }
 
       const { error } = await resend.emails.send({
-        from: 'James <james.pilkington@pilkington.info>',
+        from: 'James <jpilkington332@gmail.com>',
         to: ['delivered@resend.dev'],
         subject: subject,
         html: `<p>From: ${email}</p><p>${message}</p>`,
