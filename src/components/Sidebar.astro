@@ -5,12 +5,14 @@ const { headshot, skills } = Astro.props;
 
 <aside class="w-1/4 p-4 border-r border-gray-200">
   <div class="w-32 h-40 overflow-hidden mx-auto mb-4">
-    <img src={headshot} alt="Headshot" class="w-full h-full object-cover rounded-[50%]" />
+    <img
+      src={headshot}
+      alt="Headshot"
+      class="w-full h-full object-cover rounded-[50%]"
+    />
   </div>
   <h2 class="text-lg font-semibold mb-2">Skills</h2>
   <ul style="list-style-type: disc; padding-left: 1rem;">
-    {skills.map((skill) => (
-      <li class="mb-1">{skill}</li>
-    ))}
+    {skills.map((skill) => <li class="mb-1 text-blue-600">{skill}</li>)}
   </ul>
 </aside>
